@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px; /* mobile default */
+      background: #2b2b2b;
+      padding: 10px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .title span {
+      border: 2px solid black;
+      padding: 6px 25px;
+      background: white;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    /* 💻 PC / Desktop view */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 900px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on PC */
+        gap: 15px;
+      }
+
+      .gallery img {
+        height: 200px;
+      }
+    }
+
+    /* 📱 Small phones */
+    @media (max-width: 480px) {
+      .title span {
+        font-size: 14px;
+        padding: 5px 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="title">
+      <span>PORTFOLIO</span>
+    </div>
+
+    <div class="gallery">
+      <img src="/GGs/iMG/f78c1600-ce1b-49ce-8837-ce1575089cbc.jfif">
+      <img src="/GGs/iMG/f401f204-32e8-4e8e-b387-47dcc7b60fd5.jfif">
+      <img src="/GGs/iMG/dcf2cec6-ca8d-49e4-aefb-95f0cd5f1f16.jfif">
+      <img src="/GGs/iMG/c76c39d5-a134-4735-850f-f06959a75a38.jfif">
+      <img src="/GGs/iMG/c51658ad-fd02-4c51-97bb-c5c5450a999d.jfif">
+      <img src="/GGs/iMG/bb07aa1d-ae30-4fb0-bf72-a550ff1439ca.jfif">
+      <img src="/GGs/iMG/04c73889-94e0-4417-be30-7e094ca95c56.jfif">
+      <img src="/GGs/iMG/1e153536-4af4-4bf6-aac3-6d21f772edcb.jfif">
+      <img src="/GGs/iMG/364e436c-f44f-41a6-8fe4-8c619a0b7a3a.jfif">
+      <img src="/GGs/iMG/57379039-78df-43b7-bdef-f71e196ff142.jfif">
+      <img src="/GGs/iMG/36ef41df-1db5-4540-a257-354b7b595a9d.jfif">
+      <img src="/GGs/iMG/72b890bd-e19a-42bd-945b-16f2ad7dc07d.jfif">
+      <img src="/GGs/iMG/7f5ca834-909b-4aa9-bd04-fedafb4746da.jfif">
+      <img src="/GGs/iMG/92c7193b-cdd2-4e85-9b20-b90c95a98b24.jfif">
+      <img src="/GGs/iMG/aa65baa1-507d-4e22-8ddd-762aa33d2f3b.jfif">
+      <img src="/GGs/iMG/1.jfif">
+      <img src="/GGs/iMG/2.jfif">
+      <img src="/GGs/iMG/3.jfif">      
+      <img src="/GGs/iMG/4.jfif">
+      <img src="/GGs/iMG/445.jfif">
+      <img src="/GGs/iMG/66.jfif">
+    </div>
+
+  </div>
+
+</body>
+</html>

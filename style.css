@@ -1,0 +1,214 @@
+/* Custom Global Styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* NAVBAR: Set text color to white and align right */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+/* MAIN HERO SECTION: The Black and Gray with Angle */
+.hero-wrapper {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* The Angled Gray Shape (Using Clip-Path) */
+.hero-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38%; /* Adjust height of the gray area */
+    background: linear-gradient(to top, #333 0%, #555 100%);
+    /* This creates the diagonal cut */
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+/* THE PICTURE CENTERING LOGIC */
+.photo-center-frame {
+    position: absolute;
+    top: 50%; /* Position top edge at 50% */
+    left: 50%; /* Position left edge at 50% */
+    /* Pulls image back by exactly half its own width/height to center it perfectly */
+    transform: translate(-50%, -50%); 
+    z-index: 5; /* Sits above the gray background */
+    width: 100%;
+    text-align: center;
+}
+
+.main-profile-photo {
+    height: 80vh; /* Scaled to fit 80% of screen height */
+    width: auto;
+    /* Optional: Makes image look more professional against the dark bg */
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
+}
+
+/* Text and Socials Overlay (Top layer) */
+.info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.ls-3 { letter-spacing: 3px; }
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .main-profile-photo { height: 60vh; }
+    .hero-wrapper::after { height: 45%; }
+    .ls-3 { letter-spacing: 1px; }
+    .display-2 { font-size: 3rem; }
+}
+
+/* Shared components for About, Services, etc. */
+.boxed-title {
+    display: inline-block;
+    border: 3px solid #000;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Glassmorphism Skill Cards */
+.skill-card-v2 {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-card-v2:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-10px);
+}
+
+.emoji-box {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+/* Bento Grid for Skills */
+.skills-bento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-bento-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.skill-bento-card:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+}
+
+/* Portfolio Cinematic Hover */
+.portfolio-item-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 450px;
+    margin-bottom: 25px;
+}
+
+.portfolio-item-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-overlay-text {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item-wrap:hover .portfolio-overlay-text { opacity: 1; }
+.portfolio-item-wrap:hover img { transform: scale(1.1); }
+.main-profile-photo {
+    /* Height: Increase this to 90 or 95vh for a massive, bold look */
+    height: 250vh; 
+    width: auto;
+    /* Centering and Scaling */
+    object-fit: contain; 
+    display: block;
+    margin: 0 auto;
+    top: 5%;
+    left: 90%;
+    transform: translateX(-30%);
+
+/* Keep it responsive for mobile phones */
+@media (max-width: 768px) {
+    .main-profile-photo {
+        height: 75vh; /* Slightly smaller on phones so it doesn't hide your text */
+    }
+}
+.info-overlay {
+    position: relative;
+    z-index: 10; /* Higher than the photo (1) */
+}

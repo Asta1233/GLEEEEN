@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Skills Sidebar</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    background: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 100%;
+    max-width: 320px;
+    background: linear-gradient(#dcdcdc, #bfbfbf);
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* Title */
+.title-box {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* Section titles */
+h2 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin: 20px 0 10px;
+}
+
+/* Skill items */
+.skill {
+    margin: 18px 0;
+}
+
+.skill i {
+    font-size: 28px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.skill span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    display: block;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet */
+@media (min-width: 600px) {
+    .sidebar {
+        max-width: 380px;
+        padding: 30px 20px;
+    }
+
+    .skill i {
+        font-size: 32px;
+    }
+
+    .skill span {
+        font-size: 11px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .wrapper {
+        height: 100vh;
+        align-items: center;
+    }
+
+    .sidebar {
+        max-width: 300px;
+        padding: 40px 20px;
+    }
+
+    h2 {
+        margin-top: 25px;
+    }
+
+    .skill {
+        margin: 20px 0;
+    }
+
+    .skill i {
+        font-size: 30px;
+    }
+
+    .skill span {
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="sidebar">
+
+    <div class="title-box">SKILLS</div>
+
+    <h2>NOW:</h2>
+
+    <div class="skill"><i class="fas fa-paint-roller"></i><span>PAINTER</span></div>
+    <div class="skill"><i class="fas fa-wrench"></i><span>HOUSEHOLD REPAIRS</span></div>
+    <div class="skill"><i class="fas fa-toolbox"></i><span>ELECTRICAL WORK</span></div>
+    <div class="skill"><i class="fas fa-utensils"></i><span>BUTCHER</span></div>
+    <div class="skill"><i class="fas fa-faucet"></i><span>PLUMBER</span></div>
+    <div class="skill"><i class="fas fa-utensils"></i><span>COOKING</span></div>
+    <div class="skill"><i class="fas fa-broom"></i><span>CLEANING</span></div>
+    <div class="skill"><i class="fas fa-soap"></i><span>LAUNDRY</span></div>
+    <div class="skill"><i class="fas fa-car"></i><span>DRIVER</span></div>
+
+    <h2>LEARNING:</h2>
+
+    <div class="skill"><i class="fas fa-hammer"></i><span>CARPENTRY</span></div>
+    <div class="skill"><i class="fas fa-truck-monster"></i><span>OPERATOR HEAVY EQUIPMENT</span></div>
+
+</div>
+</div>
+
+</body>
+</html>

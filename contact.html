@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Section</title>
+
+<style>
+body {
+    margin: 0;
+    background: #222;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(#dcdcdc, #bfbfbf);
+    padding: 40px 25px;
+    text-align: center;
+}
+
+/* CONTACT TITLE */
+.title-box {
+    display: inline-block;
+    border: 6px solid #000;
+    padding: 12px 40px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+/* TEXT */
+.description {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin: 35px 0;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+/* L SHAPE BORDER */
+.input-group::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    height: 3px;
+    background: black;
+}
+
+.input-group::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 3px;
+    background: black;
+}
+
+/* TEXTAREA BIGGER */
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* SUBMIT */
+.submit-wrapper {
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: none;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 40px;
+}
+
+/* vertical lines */
+.submit-btn::before,
+.submit-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: black;
+}
+
+.submit-btn::before {
+    left: 0;
+}
+
+.submit-btn::after {
+    right: 0;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 60px 40px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .title-box {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="container">
+
+    <div class="title-box">CONTACT</div>
+
+    <div class="description">
+        My name is Tomasz Gajda, I’m a third year Applied Computer Science student at AGH University of Science and Technology in Cracow, Poland.
+    </div>
+
+    <div class="input-group">
+        <input type="text" placeholder="ENTER YOUR NAME*">
+    </div>
+
+    <div class="input-group">
+        <input type="email" placeholder="ENTER YOUR EMAIL*">
+    </div>
+
+    <div class="input-group">
+        <input type="text" placeholder="PHONE NUMBER">
+    </div>
+
+    <div class="input-group">
+        <textarea placeholder="YOUR MESSAGE*"></textarea>
+    </div>
+
+    <div class="submit-wrapper">
+        <button class="submit-btn">SUBMIT</button>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
